@@ -11,6 +11,7 @@ setup(
     maintainer_email='sub@subl.ee',
     url='https://github.com/what-studio/jenkins-cffi/',
     packages=['jenkins_cffi'],
+    package_data={'jenkins_cffi': ['lookup3.c']},
     install_requires=['cffi>=1.10.0'],
     setup_requires=['cffi>=1.10.0'],
     cffi_modules=['jenkins_cffi/build.py:ffibuilder'],
