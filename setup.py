@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='jenkins-cffi',
-    version='1.0.2',
+    version='1.0.2.1',
     description="Python CFFI wrapper around Bob Jenkins' hash functions.",
     author='What! Studio',
     maintainer='Heungsub Lee',
