@@ -10,9 +10,9 @@
 
 """
 try:
-    import jenkins_cffi._lookup3.lib as lookup3
+    from jenkins_cffi._lookup3 import ffi, lib as lookup3
 except ImportError:
-    lookup3 = NotImplemented
+    ffi = lookup3 = NotImplemented
 
 
 __all__ = ['hashlittle', 'hashlittle2']
@@ -23,7 +23,7 @@ def hashlittle(s, seed=0):
 
 
 def hashlittle2(s, seed1=0, seed2=0):
-    init_val1 = c_int(seed1)
-    init_val2 = c_int(seed2)
-    lookup3.hashlittle2(s, len(s), byref(init_val1), byref(init_val2))
-    return init_val1.value, init_val2.value
+    init_val1 = ffi.new('uint32_t*')
+    init_val2 = ffi.new('uint32_t*')
+    lookup3.hashlittle2(s, len(s), init_val1, init_val2)
+    return init_val1[0], init_val2[0]
