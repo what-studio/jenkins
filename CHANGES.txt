@@ -1,3 +1,4 @@
+1.0.2.1: Started to use CFFI instead of ctypes for PyPy support.
 1.0.2: Fixed missing .c file path issue.
 1.0.1: Fixed library path.
 1.0:  First release.
