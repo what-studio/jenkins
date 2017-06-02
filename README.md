@@ -5,7 +5,7 @@ $ pip install jenkins-cffi
 ```
 
 ```python
->>> import jenkins_cffi as jenkins
->>> jenkins.hashlittle('jenkins')
+>>>> import jenkins_cffi as jenkins
+>>>> jenkins.hashlittle('jenkins')
 202276345
 ```
